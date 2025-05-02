@@ -32,3 +32,8 @@ button{
     padding:5px;
     border: solid 1px darkgrey
 }
+.editPhoto{
+    position:absolute;
+    transform:translate(-50px,175px);
+    border-radius: 50%;
+}

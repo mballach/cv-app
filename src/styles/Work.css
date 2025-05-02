@@ -1,0 +1,90 @@
+.work-container{
+    display:flex;
+    flex-direction: column;
+    margin-left:auto;
+    margin-right: auto;
+    gap:25px;
+}
+
+.workTextInput{
+    display:flex;
+    flex-direction: column;
+}
+.edLabelPairWrapper{
+    display:flex;
+    gap: 15px;
+    flex-grow: 1;
+    text-wrap:none;
+}
+.labelRowWrapper{
+    display:flex;
+    gap:25px;
+    text-align: left;
+    
+}
+.work-card-header{
+    display:flex;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;;
+    background-color: lightseagreen;
+    padding:25px;
+    padding-left:10%;
+    padding-right:10%;
+}
+.work-card-header:hover{
+    background-color: rgb(28, 149, 143);
+}
+.work-card-base-top{
+    display:flex;
+}
+.description{
+    flex-grow: 1;
+    font-weight: bold;
+}
+
+.work-card-base{
+    display:flex;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;;
+    background-color: rgb(209, 233, 232);
+    padding:25px;
+    padding-left:10%;
+    padding-right:10%;
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    text-align: left;
+}
+
+.job-title, .job-years{
+    color:white;
+    font-weight:bold;
+    font-size:20px;
+}
+
+.job-title{
+    flex-grow:1;
+    text-align:left;
+}
+
+.work-card{
+    display:flex;
+    flex-direction: column;
+}
+
+.wkButtons{
+    display:flex;
+    gap:15px;
+    justify-content: center;
+}
+
+.editSub{
+    background-color: rgb(210, 210, 210);
+    padding:30px;
+    padding-left:10%;
+    padding-right:10%;
+    padding-top:10px;
+    margin-top:0px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}

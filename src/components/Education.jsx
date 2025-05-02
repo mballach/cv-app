@@ -15,7 +15,6 @@ function Education(){
         e.preventDefault()
         if(e.currentTarget.elements.edSchool.value=="" || e.currentTarget.elements.edDegree.value=="" || e.currentTarget.elements.edYear.value==""){
             alert("Please fill all fields to add education entry")
-            toggleAddingEducation()
         } else {
             let newAdd = {school:e.currentTarget.elements.edSchool.value, degree:e.currentTarget.elements.edDegree.value, year:e.currentTarget.elements.edYear.value, id: crypto.randomUUID()}
             setEducationHistory([...educationHistory,newAdd])
@@ -49,7 +48,7 @@ function Education(){
             if(e.currentTarget.elements.edYear.value=="") {
                 e.currentTarget.elements.edYear.value=activeEd.year
             }
-            let newAdd = {school:e.currentTarget.elements.edSchool.value, degree:e.currentTarget.elements.edDegree.value, year:e.currentTarget.elements.edYear.value, id: crypto.randomUUID()}
+            let newAdd = {school:e.currentTarget.elements.edSchool.value, degree:e.currentTarget.elements.edDegree.value, year:e.currentTarget.elements.edYear.value, id: activeEd.id}
             setEducationHistory([...reducedList,newAdd])
             educationHistory.push(newAdd)
         }
@@ -73,6 +72,7 @@ function Education(){
                         <div className="edLabelPairWrapper"><label htmlFor="edSchool" >School: </label><input type="text" id="edSchool"placeholder={ed.school}/></div>
                         <div className="edLabelPairWrapper"><label htmlFor="edYear">Year Completed: </label><input type="text" id="edYear" placeholder={ed.year}/></div>
                         <button type="submit">+ Submit Edit</button>
+                        <button onClick={toggleAddingToEdit}>Cancel</button>
                     </form>
                     </div>
                 </>
@@ -107,9 +107,7 @@ function Education(){
             return(
                 <>
                     {educationHistory.map((ed) => (
-                        <>
-                        <EdEntry ed={ed} ar={educationHistory} key={ed.id}/>
-                        </>
+                        <EdEntry ed={ed}  key={ed.id}/>
                     ))}
                 </>
             )
@@ -132,6 +130,7 @@ function Education(){
                     <div className="edLabelPairWrapper"><label htmlFor="edSchool" >School: </label><input type="text" id="edSchool"placeholder="University of ..."/></div>
                     <div className="edLabelPairWrapper"><label htmlFor="edYear">Year Completed: </label><input type="text" id="edYear" placeholder="2018"/></div>
                     <button type="submit">+ Log Education History</button>
+                    <button onClick={toggleAddingEducation}>Cancel</button>
                 </form>
             )
         }

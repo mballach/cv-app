@@ -1,6 +1,8 @@
 .education-container{
     display:flex;
     flex-direction: column;
+    margin-left:auto;
+    margin-right: auto;
     gap:25px;
 }
 .education-card, .education-card-active {
