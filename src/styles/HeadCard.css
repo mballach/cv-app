@@ -23,3 +23,12 @@
 .editContact{
     margin-top:10px;
 }
+
+.headCard{
+    min-width: 50vw;
+}
+
+button{
+    padding:5px;
+    border: solid 1px darkgrey
+}

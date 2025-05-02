@@ -1,0 +1,73 @@
+.education-container{
+    display:flex;
+    flex-direction: column;
+    gap:25px;
+}
+.education-card, .education-card-active {
+    color:white;
+    background-color: lightseagreen;
+    padding: 25px;
+    padding-left:10%;
+    padding-right:10%;
+    border-radius: 15px;
+    display:flex;
+}
+
+.education-card:hover, .education-card-active {
+    background-color: rgb(28, 149, 143);
+}
+
+.education-card-active {
+    border-bottom-left-radius: 1px;
+    border-bottom-right-radius: 1px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+}
+
+.edLabelPairWrapper{
+    display:flex;
+    gap: 15px;
+}
+
+input{
+    margin-right:auto;
+    flex-grow:1
+}
+.deg{
+    font-weight: bold;
+    font-size:20px;
+}
+
+.edDelete{
+    padding:5px;
+    margin-top:auto;
+    margin-bottom:auto;
+}
+
+.edDelete:hover{
+    border-color: darkblue;
+}
+
+.creds{
+    text-align: left;
+    flex-grow:1;
+}
+.edButtons{
+    display:flex;
+    gap:15px;
+}
+
+.editSub{
+    background-color: rgb(210, 210, 210);
+    padding:30px;
+    padding-left:10%;
+    padding-right:10%;
+    padding-top:10px;
+    margin-top:0px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
